@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manvir &amp; Gurpreet: Save the dates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum:#3a0d2b;
+    --plum-deep:#2a0720;
+    --marigold:#f5a81c;
+    --blush:#f7e3ea;
+    --line:rgba(247,227,234,.22);
+  }
+  *{box-sizing:border-box}
+  html{background:var(--plum-deep)}
+  body{
+    margin:0;min-height:100vh;
+    background:radial-gradient(120% 60% at 50% 0%,#5a1743 0%,var(--plum) 45%,var(--plum-deep) 100%);
+    color:var(--blush);
+    font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    line-height:1.5;
+    -webkit-text-size-adjust:100%;
+  }
+  main{max-width:34rem;margin:0 auto;padding:3rem 1.4rem 4rem}
+  h1{
+    font-family:"Cormorant Garamond",Georgia,serif;
+    font-weight:600;font-size:clamp(2.6rem,11vw,3.6rem);
+    line-height:1.02;margin:0 0 .6rem;text-align:center;letter-spacing:.005em;
+  }
+  .lede{text-align:center;margin:0 auto 2.4rem;max-width:24rem;color:rgba(247,227,234,.82)}
+  ul{list-style:none;margin:0;padding:0}
+  .event{padding:1.4rem 0;border-top:1px solid var(--line)}
+  .event:last-child{border-bottom:1px solid var(--line)}
+  .date{
+    font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;
+    font-size:1.85rem;line-height:1.1;color:var(--marigold);margin:0;
+  }
+  .name{font-weight:700;margin:.35rem 0 0;font-size:1.08rem}
+  .place{margin:.1rem 0 0;color:rgba(247,227,234,.78);font-size:.98rem}
+  .btn{
+    display:block;text-align:center;text-decoration:none;font:inherit;font-weight:700;
+    border-radius:999px;padding:.95rem 1.4rem;min-height:48px;
+  }
+  .btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+  .primary{background:var(--marigold);color:var(--plum-deep);font-size:1.08rem;margin:0 0 .9rem}
+  .primary:hover{background:#ffb93a}
+  .small{
+    display:inline-block;margin-top:.8rem;padding:.6rem 1.1rem;min-height:44px;
+    border:1.5px solid var(--marigold);color:var(--marigold);font-size:.95rem;
+  }
+  .small:hover{background:rgba(245,168,28,.12)}
+  .all{margin-top:2.2rem}
+  .hint{font-size:.9rem;text-align:center;color:rgba(247,227,234,.7);margin:0}
+  .hint a{color:var(--blush)}
+  /* device-specific display */
+  .only-android,.only-ios{display:none}
+  html.ios .only-ios{display:block}
+  html.ios .hide-ios{display:none}
+  html.android .only-android{display:block}
+  html.android .hide-android{display:none}
+  @media (prefers-reduced-motion:no-preference){
+    .btn{transition:background .15s ease}
+  }
+</style>
+<script>
+  (function(){
+    var ua = navigator.userAgent || "";
+    var isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    var isAndroid = /Android/i.test(ua);
+    var c = document.documentElement.classList;
+    if (isIOS) c.add("ios"); else if (isAndroid) c.add("android");
+  })();
+</script>
+</head>
+<body>
+<main>
+  <h1>Manvir &amp; Gurpreet</h1>
+  <p class="lede">Save the dates for our wedding celebrations in August 2027.</p>
+
+  <div class="all">
+    <!-- iPhone, laptops, everything except Android: one tap adds all three -->
+    <a class="btn primary hide-android" href="manvir-gurpreet-wedding.ics">Add all 3 events to my calendar</a>
+    <p class="hint only-ios">On iPhone, tap <b>Add All</b> when the calendar box appears.</p>
+    <p class="hint only-android">Tap <b>Add to Google Calendar</b> under each event below.</p>
+  </div>
+
+  <ul style="margin-top:2rem">
+    <li class="event">
+      <p class="date">Friday 27 August 2027</p>
+      <p class="name">Gurpreet's Jaggo</p>
+      <p class="place">Pearl Suite, West Bromwich</p>
+      <a class="btn small hide-ios" target="_blank" rel="noopener"
+         href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Gurpreet%27s+Jaggo&dates=20270827/20270828&location=Pearl+Suite%2C+West+Bromwich">Add to Google Calendar</a>
+    </li>
+    <li class="event">
+      <p class="date">Sunday 29 August 2027</p>
+      <p class="name">Manvir and Gurpreet Lavaan</p>
+      <p class="place">Wednesfield Gurdwara, Wednesfield</p>
+      <a class="btn small hide-ios" target="_blank" rel="noopener"
+         href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Manvir+and+Gurpreet+Lavaan&dates=20270829/20270830&location=Wednesfield+Gurdwara%2C+Wednesfield">Add to Google Calendar</a>
+    </li>
+    <li class="event">
+      <p class="date">Monday 30 August 2027</p>
+      <p class="name">Manvir and Gurpreet Reception</p>
+      <p class="place">Grand Station, Wolverhampton</p>
+      <a class="btn small hide-ios" target="_blank" rel="noopener"
+         href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Manvir+and+Gurpreet+Reception&dates=20270830/20270831&location=Grand+Station%2C+Wolverhampton">Add to Google Calendar</a>
+    </li>
+  </ul>
+
+  <p class="hint" style="margin-top:2rem">
+    Using Samsung Calendar or another app? <a href="manvir-gurpreet-wedding.ics">Download all three events as a file</a>.
+  </p>
+</main>
+</body>
+</html>
